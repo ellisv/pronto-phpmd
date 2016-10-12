@@ -1,0 +1,12 @@
+language: php
+php:
+  - 7.0
+env:
+  - PRONTO_PHPMD_EXECUTABLE="$HOME/.composer/vendor/bin/phpmd"
+before_install:
+  - rvm install 2.2.3
+  - gem install bundler -v 1.13.3
+install:
+  - composer global require phpmd/phpmd
+  - bundle install
+script: bundle exec rake
