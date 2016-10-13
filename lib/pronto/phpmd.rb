@@ -39,15 +39,12 @@ module Pronto
       xml = `#{escaped_executable} #{escaped_path} xml #{escaped_ruleset}`
       doc = REXML::Document.new(xml)
 
-      violations = []
-      doc.elements.each('pmd/file/violation') do |el|
+      doc.elements.collect('pmd/file/violation') do |el|
         line = el.attributes['beginline'].to_i
         next unless line > 0
 
-        violations.push({ line: line, msg: el.first.to_s.strip })
+        { line: line, msg: el.first.to_s.strip }
       end
-
-      violations
     end
 
     def new_message(offence, line)
