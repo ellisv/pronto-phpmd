@@ -1,6 +1,6 @@
 # Pronto runner for PHPMD
 
-[![Build Status](https://travis-ci.org/EllisV/pronto-phpmd.svg?branch=master)](https://travis-ci.org/EllisV/pronto-phpmd)
+[![Build Status](https://travis-ci.org/ellisv/pronto-phpmd.svg?branch=master)](https://travis-ci.org/ellisv/pronto-phpmd)
 
 Pronto runner for [PHPMD](https://github.com/phpmd/phpmd).
 [What is Pronto?](https://github.com/mmozuras/pronto)
